@@ -6,7 +6,7 @@ import { TextToSpeechClient } from '@google-cloud/text-to-speech';
 admin.initializeApp(functions.config().firebase);
 const bucket = admin.storage().bucket();
 
-export const helloWorld = functions.https.onRequest((request, response) => {
+export const textToSpeech = functions.https.onRequest((request, response) => {
   // unsupport
   if (request.method === 'GET') {
     response.status(404).end();
